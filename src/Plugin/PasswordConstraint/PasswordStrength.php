@@ -66,7 +66,7 @@ class PasswordStrength extends PasswordConstraintBase {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $form['strength_score'] = array(
       '#type' => 'select',
-      '#title' => t('Password Strength Minimum Score'),
+      '#title' => $this->t('Password Strength Minimum Score'),
       '#options' => $this->strength_scores,
       '#default_value' => $this->getConfiguration()['strength_score'],
     );
